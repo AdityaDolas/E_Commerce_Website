@@ -21,7 +21,7 @@ public class MyServlet extends HttpServlet {
      * Default constructor. 
      */
     public MyServlet() {
-        // TODO Auto-generated constructor stub
+        // TODO Auto-generated constructor s
     }
 
 	/**
@@ -29,8 +29,11 @@ public class MyServlet extends HttpServlet {
 	 */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter out= response.getWriter();
-		String chkbox=request.getParameter("chkbox");
-		if(chkbox.equals("Add Cookie"))
+		String btn=request.getParameter("btn");
+		String name=request.getParameter("userID");
+		String password=request.getParameter("password");
+		
+		if(name.equals("password") && request.getParameter("chk")!=null)
 		{
 			Cookie c1=new Cookie("username", "admin");
 			Cookie c2=new Cookie("password", "admin");
